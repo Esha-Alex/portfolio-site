@@ -2,22 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 body {
     background-color: #FDF6E3;
     color: #333333;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 
 #header{
     width: 100%;
+    margin-right: 0px;
     height: 500px;
     background-image: url(../images/BackgroundEshaportfolio.jpeg);
-    background-size:cover;
-    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
-
 .container{
     padding: 10px 10%;
 }
@@ -30,8 +35,12 @@ nav {
 }
 
 .logo{
-    font-size: xx-large;
+    font-size: 40px;
     color: #4B2E2E;
+}
+.logo span{
+    font-size: 40px;
+    color:#B22222;
 }
 
 nav ul li{
@@ -45,4 +54,169 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    position: relative;
 }
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #b87333;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text {
+    color: #4B2E2E;
+    font-size: 30px; /* bigger text */
+    margin-top: 20%; /* push it down */
+    font-weight: bold; /* make it thicker */
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#B22222 ;
+}
+#About{
+    padding: 100px 0;
+    color: #4B2E2E;
+}
+.row{
+    display: flex;
+    justify-content: space-between ;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+.subtitle {
+    font-size: 70px;   /* heading size */
+    font-weight: 600;  /* heading weight */
+    color: #4B2E2E;
+}
+
+
+/* Applies to the general paragraph text under About Me */
+.about-col2 p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #4B2E2E;
+}
+.tabtitles {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Specifically styles only the Skills / Experience / Education items */
+.tab-links {
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.tabtitles p{
+    font-weight: 700;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #B22222;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 20px 0;
+
+}
+.tab-contents ul li span{
+    color: #B22222;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab {
+  display: block !important;
+}
+
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;               /* horizontal layout */
+        /* center the whole row */
+  gap: 20px;                      /* space between images */
+}
+
+.work {
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 30%;                  /* make each image take about 30% width */
+}
+
+.work img {
+  width: 100%;
+  height: 200px;                  /* uniform height */
+  object-fit: cover;              /* crop nicely */
+  border-radius: 10px;
+  display: block;
+}
+
+
+.work img {
+  display: block;
+  margin: 0 auto;
+}
+
+.layer a {
+  color: #007BFF;          /* Nice blue color */
+  font-weight: bold;       /* Bold text */
+  text-decoration: none;   /* No underline */
+  transition: color 0.3s ease;
+}
+
+.layer a:hover {
+  color: #0056b3;          /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+  cursor: pointer;
+}
+.layer p {
+  font-size: 18px; /* or any size you want */
+  line-height: 1.2; /* optional, for better readability */
+}
+.about-col3 {
+  flex-basis: 30%;
+  padding-left: 20px;
+}
+
+.skills-icons img {
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+

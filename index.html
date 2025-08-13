@@ -10,7 +10,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <h1 class="logo">Esha Alex</h1>
+                <h1 class="logo">Esha <span>Alex</span></h1>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -18,8 +18,111 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm Esha <span>Alex <br></span>  from India</h1>
+            </div>
         </div>
     </div>
+    
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/user.jpg" alt="">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I’m very passionate about web development and constantly curious to explore the latest in technology. 
+                    I enjoy turning creative ideas into functional, user-friendly websites. 
+                    Beyond coding, I’m driven by a love for discovering new tools, solving problems, and learning something new every day.</p>
+
+                    <div class="tabtitles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programming </span><br>Writing simple logic and programs</li>
+                            <li><span>Python</span><br>Basics of syntax and automation</li>
+                            <li><span>Web Development</span><br>Basic HTML and CSS structure</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Experience </span><br>Participated in academic projects and workshops, <br>gained teamwork and problem-solving skills. <br>Collaborated in teams, applied problem-solving skills, and learned basics of C,Python, <br>and web development.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Education </span><br>B.Tech in Electronics & Communication Engineering,<br> MACE (Ongoing)</li>
+                        </ul>
+                    </div>
+                
+                <div class="about-col3">
+                    <h2>My Skills</h2>
+                    <div class="skills-icons">
+                         <img src="images/html-5.png" alt="HTML5" title="HTML5">
+                         <img src="images/css-3.png" alt="CSS3" title="CSS3">
+                         <img src="images/python.png" alt="Python" title="Python">
+                         <img src="images/c.svg" alt="C Programming" title="C Programming">
+                         
+                        </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpeg" alt="">
+                    <img src="images/work2.jpg" alt="">
+                    <img src="images/work3.jpg" alt="">
+                    <div class="layer">
+                        <h3>Expense Tracker</h3>
+                        <p>I developed a simple yet effective Expense Tracker website as a personal project to enhance my web development skills. The focus was on creating a smooth and intuitive navigation experience between multiple pages, ensuring that all links work correctly and lead the user seamlessly through the application. This project highlights my ability to build functional front-end navigation structures using HTML and CSS. Though basic in features, it demonstrates attention to user flow and website usability, which are crucial aspects of web design.</p>
+                              <a href="https://github.com/Esha-Alex/Expense-Tracker-login-" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p>contact@example.com</p>
+                    <p>0123456789</p>
+                </div>
+
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    document.getElementById(tabname).classList.add("active-tab");
+    event.currentTarget.classList.add("active-link");
+}
+
+    
+</script>
 </body>
 </html>
 
